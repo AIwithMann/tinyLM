@@ -44,17 +44,17 @@ for convo in dialogs_test:
         prompt_response_test.append([sentences[i], sentences[i + 1]])
 
 # Save pairs to CSV
-with open('train_processed.csv', 'w', newline='', encoding='utf-8') as f:
+with open('processed_data/train_processed.csv', 'w', newline='', encoding='utf-8') as f:
     writer = csv.writer(f, quoting=csv.QUOTE_ALL)
     writer.writerow(['prompt', 'response'])
     writer.writerows(prompt_response_train)
 
-with open('validation_processed.csv', 'w', newline='', encoding='utf-8') as f:
+with open('proccessed_data/validation_processed.csv', 'w', newline='', encoding='utf-8') as f:
     writer = csv.writer(f, quoting=csv.QUOTE_ALL)
     writer.writerow(['prompt', 'response'])
     writer.writerows(prompt_response_validation)   
 
-with open('test_processed.csv', 'w', newline='', encoding='utf-8') as f:
+with open('processed_data/test_processed.csv', 'w', newline='', encoding='utf-8') as f:
     writer = csv.writer(f, quoting=csv.QUOTE_ALL)
     writer.writerow(['prompt', 'response'])
     writer.writerows(prompt_response_test)
